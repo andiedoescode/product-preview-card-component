@@ -14,27 +14,31 @@
   --darkBlue: hsl(212, 21%, 14%);
   --grayBlue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
+
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Fraunces', serif;
 }
 
 body {
   background-color: var(--cream);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--ff-primary);
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+.flex {
+  display: flex;
+}
 
 main {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 95vh;
 }
 
 .product-card {
-  display: flex;
   flex-direction: column;
   background-color: var(--white);
   border-radius: 0.7rem;
@@ -56,6 +60,14 @@ main {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+h2, p, .old-price, button {
+  font-family: var(--ff-primary);
+}
+
+h1, .new-price {
+  font-family: var(--ff-secondary)
+}
+
 h2 {
   text-transform: uppercase;
   color: var(--grayBlue);
@@ -66,18 +78,15 @@ h2 {
 }
 
 h1 {
-  font-family: 'Fraunces', serif;
   font-size: 1.9rem;
   line-height: 2rem;
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.5rem;
   color: var(--grayBlue);
-  /* padding: rem; */
 }
 
 .prices {
@@ -86,13 +95,11 @@ p {
 
 .new-price {
   color: var(--darkCyan);
-  font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 2rem;
 }
 
 .old-price {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
   text-decoration: line-through;
@@ -112,7 +119,7 @@ button {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 button:hover{
